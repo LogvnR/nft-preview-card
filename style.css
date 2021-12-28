@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap');
+
+/* === Variables === */
+:root {
+  --mainBG: hsl(217, 54%, 11%);
+  --secondaryBG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --text1: hsl(215, 51%, 70%);
+  --accent: hsl(178, 100%, 50%);
+  --font1: 'Outfit', sans-serif;
+  --fontLg: clamp(16px, 5.5vw, 22px);
+  --fontMd: clamp(14px, 4.5vw, 20px);
+}
+
+body {
+  background-color: var(--mainBG);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Main Container === */
+
+.section-container {
+  background-color: var(--secondaryBG);
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+  padding: 1.4rem;
+  border-radius: 0.7rem;
+  -webkit-box-shadow: 5px 5px 10px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 10px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* === Section 1: Main Photo === */
+
+.section-one {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-one__hover-view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(0, 255, 247, 0);
+  border-radius: 0.5rem;
+}
+
+.section-one__hover-view svg {
+  margin: auto;
+  opacity: 0;
+}
+
+.section-one:hover .section-one__hover-view {
+  transition: all 0.25s ease-in-out;
+  background-color: rgba(0, 255, 247, 0.4);
+}
+
+.section-one:hover .section-one__hover-view svg {
+  transition: all 0.25s ease-in-out;
+  opacity: 1;
+}
+
+.section-one__photo {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* === Section 2: Title, Description, and Currency === */
+
+.section-two {
+  display: flex;
+}
+
+.section-two__title {
+  margin: 1.2em 0 0;
+  font-family: var(--font1);
+  font-size: var(--fontLg);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.section-two__title:hover {
+  transition: all 0.25s ease-in-out;
+  color: var(--accent);
+}
+
+.section-two__desc {
+  margin: 0.8em 0 0;
+  font-family: var(--font1);
+  font-size: var(--fontMd);
+  font-weight: 300;
+  color: var(--text1);
+}
+
+/* === Currency and Time Left Container === */
+
+.section-two__additional-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  font-size: var(--fontMd);
+  border-bottom: 1px solid var(--line);
+}
+
+.additional-info__currency {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.currency-amount {
+  font-family: var(--font1);
+  color: var(--accent);
+  font-size: var(--fontMd);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.additional-info__time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.time-left {
+  font-family: var(--font1);
+  color: var(--text1);
+  font-size: var(--fontMd);
+  letter-spacing: 0.5px;
+}
+
+/* === Section 3: Content Creator === */
+
+.section-three {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-three__image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1.6px solid var(--white);
+  border-radius: 50%;
+}
+
+.section-three__author {
+  color: var(--text1);
+  font-family: var(--font1);
+  font-weight: 300;
+}
+
+.section-three__author-name {
+  color: var(--white);
+}
+
+.section-three__author-name:hover {
+  transition: all 0.25s ease-in-out;
+  color: var(--accent);
+}
